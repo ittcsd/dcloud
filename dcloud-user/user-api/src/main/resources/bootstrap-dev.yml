@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        # 配置文件的环境
+        group: DEFAULT_GROUP
+        # 配置文件的格式
+        file-extension: yaml
+        # 配置中心的地址
+        server-addr: 192.168.1.61:8848
+        # 配置文件prefix
+        prefix: ${spring.application.name}
+        #命名空间
+        namespace: 43b1fb78-41f1-4832-afb8-444021492fa3

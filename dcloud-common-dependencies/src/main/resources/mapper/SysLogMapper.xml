@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dcloud.dependencies.mapper.SysLogMapper">
+
+    <resultMap id="BaseResult" type="com.dcloud.common.entity.log.SysLogBean">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="log_id" jdbcType="VARCHAR" property="logId"/>
+        <result column="model" jdbcType="VARCHAR" property="model"/>
+        <result column="request_url" jdbcType="VARCHAR" property="requestUrl"/>
+        <result column="log_type" jdbcType="VARCHAR" property="logType"/>
+        <result column="method_name" jdbcType="VARCHAR" property="methodName"/>
+        <result column="params" jdbcType="VARCHAR" property="params"/>
+        <result column="msg" jdbcType="VARCHAR" property="msg"/>
+        <result column="log_note" jdbcType="VARCHAR" property="logNote"/>
+        <result column="ip" jdbcType="VARCHAR" property="ip"/>
+        <result column="code" jdbcType="INTEGER" property="code"/>
+        <result column="save_data_flag" jdbcType="VARCHAR" property="saveDataFlag"/>
+        <result column="creator" jdbcType="VARCHAR" property="creator"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="updater" jdbcType="VARCHAR" property="updater"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+
+    <sql id="Base_Column">
+        log_id,model,request_url,log_type,method_name,params,msg,log_note,ip,code,save_data_flag,creator,create_time
+    </sql>
+
+    <insert id="saveSysLogDetail" parameterType="com.dcloud.common.entity.log.SysLogBean">
+        insert into t_sys_log
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="logId != null">
+                log_id,
+            </if>
+            <if test="model != null">
+                model,
+            </if>
+            <if test="requestUrl != null">
+                request_url,
+            </if>
+            <if test="logType != null">
+                log_type,
+            </if>
+            <if test="methodName != null">
+                method_name,
+            </if>
+            <if test="params != null">
+                params,
+            </if>
+            <if test="msg != null">
+                msg,
+            </if>
+            <if test="logNote != null">
+                log_note,
+            </if>
+            <if test="ip != null">
+                ip,
+            </if>
+            <if test="code != null">
+                code,
+            </if>
+            <if test="saveDataFlag != null">
+                save_data_flag,
+            </if>
+            <if test="creator != null">
+                creator,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updater != null">
+                updater,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="logId != null">
+                #{logId,jdbcType=VARCHAR},
+            </if>
+            <if test="model != null">
+                #{model,jdbcType=VARCHAR},
+            </if>
+            <if test="requestUrl != null">
+                #{requestUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="logType != null">
+                #{logType,jdbcType=VARCHAR},
+            </if>
+            <if test="methodName != null">
+                #{methodName,jdbcType=VARCHAR},
+            </if>
+            <if test="params != null">
+                #{params,jdbcType=VARCHAR},
+            </if>
+            <if test="msg != null">
+                #{msg,jdbcType=VARCHAR},
+            </if>
+            <if test="logNote != null">
+                #{logNote,jdbcType=VARCHAR},
+            </if>
+            <if test="ip != null">
+                #{ip,jdbcType=VARCHAR},
+            </if>
+            <if test="code != null">
+                #{code,jdbcType=INTEGER},
+            </if>
+            <if test="saveDataFlag != null">
+                #{saveDataFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="creator != null">
+                #{creator,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updater != null">
+                #{updater,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="getSysLogDetailByLogId" resultMap="BaseResult">
+        select <include refid="Base_Column"/> from t_sys_log where log_id = #{logId,jdbcType=VARCHAR}
+    </select>
+
+
+</mapper>
