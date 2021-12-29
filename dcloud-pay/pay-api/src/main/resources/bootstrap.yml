@@ -1,0 +1,7 @@
+server:
+  port: 8105
+spring:
+  profiles:
+    active: dev
+  application:
+    name: dcloud-pay
