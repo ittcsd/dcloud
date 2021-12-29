@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>pay-entity</artifactId>
     <name>pay-entity</name>
-    <description>系统管理模块实体类</description>
+    <description>支付模块实体类</description>
 
 
 </project>
