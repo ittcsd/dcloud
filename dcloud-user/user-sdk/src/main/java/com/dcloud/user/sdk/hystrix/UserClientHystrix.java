@@ -1,7 +1,7 @@
-package com.dcloud.sdk.hystrix;
+package com.dcloud.user.sdk.hystrix;
 
 import com.dcloud.common.entity.response.DcloudJsonResult;
-import com.dcloud.sdk.client.UserClient;
+import com.dcloud.user.sdk.client.UserClient;
 import com.dcloud.user.entity.UserInfo;
 import org.springframework.stereotype.Component;
 

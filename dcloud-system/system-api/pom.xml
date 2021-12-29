@@ -8,8 +8,17 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>system-api</artifactId>
+    <name>system-entity</name>
+    <description>系统管理模块实体类</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.dcloud</groupId>
+            <artifactId>system-entity</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

@@ -1,7 +1,7 @@
 package com.dcloud.order.api.controller;
 
 import com.dcloud.common.entity.response.DcloudJsonResult;
-import com.dcloud.sdk.client.UserClient;
+import com.dcloud.user.sdk.client.UserClient;
 import com.dcloud.user.entity.UserInfo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

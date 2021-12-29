@@ -1,7 +1,7 @@
-package com.dcloud.sdk.client;
+package com.dcloud.user.sdk.client;
 
 import com.dcloud.common.entity.response.DcloudJsonResult;
-import com.dcloud.sdk.hystrix.UserClientHystrix;
+import com.dcloud.user.sdk.hystrix.UserClientHystrix;
 import com.dcloud.user.entity.UserInfo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

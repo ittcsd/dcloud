@@ -1,0 +1,7 @@
+server:
+  port: 8104
+spring:
+  profiles:
+    active: dev
+  application:
+    name: dcloud-system
