@@ -1,0 +1,7 @@
+server:
+  port: 8106
+spring:
+  profiles:
+    active: dev
+  application:
+    name: dcloud-upload

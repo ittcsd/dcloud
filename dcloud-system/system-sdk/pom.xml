@@ -8,8 +8,16 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>system-sdk</artifactId>
+    <name>system-sdk</name>
+    <description>系统管理模块sdk</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.dcloud</groupId>
+            <artifactId>system-entity</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
