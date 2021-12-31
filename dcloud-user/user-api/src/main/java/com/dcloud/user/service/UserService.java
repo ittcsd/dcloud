@@ -5,4 +5,7 @@ import com.dcloud.user.entity.UserInfo;
 
 public interface UserService {
     DcloudJsonResult<UserInfo> getUserInfoById(String userId);
+
+    DcloudJsonResult<UserInfo> getUserInfoByNacosConfig();
+
 }
